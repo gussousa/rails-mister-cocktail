@@ -101,8 +101,8 @@ ul {
 
 .center {
   text-align: center;
+  max-width: 100vh;
   display: flex;
   justify-content: center;
-  min-width: 400px;
   margin: 0px;
 }
