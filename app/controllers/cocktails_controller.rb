@@ -13,7 +13,9 @@ class CocktailsController < ApplicationController
 
   def show
     @doses = Dose.where(cocktail_id: @cocktail.id)
+    @reviews = Review.where(cocktail_id: @cocktail.id)
     @dose = Dose.new
+    @review = Review.new
   end
 
   def new

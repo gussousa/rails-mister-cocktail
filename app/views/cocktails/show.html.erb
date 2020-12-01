@@ -44,10 +44,28 @@
       </div>
     </div>
   </div>
-    <div class="row align-items-center mt-5">
-    <div class="col col-12">
-        <h2>Reviews:</h2>
-        <hr>
+  <div class="row  mt-5 d-flex">
+    <div class="col col-6">
+      <h2>Reviews:</h2>
+      <hr>
+      <ul>
+        <% @reviews.each do |review| %>
+          <li>
+            <p><strong>Rating:</strong> <%= review.rating %></p>
+            <p><%= review.content %></p>
+            <%= link_to ("<i class='fas fa-eraser'></i>").html_safe, 
+                              dose_path(dose),
+                              method: :delete,
+                              data: { confirm: "Do you really want to erase this review?" } %>
+          </li>
+        <% end %>
+      </ul>
+      <hr>
+    </div>
+    <div class="col col-6">
+      <h2>Add review:</h2>
+      <hr>
+      <%= render "review_form" %>
     </div>
   </div>
 </div>
