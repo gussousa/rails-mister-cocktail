@@ -10,7 +10,22 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div class="bg-shade">
   <body>
-    <%= yield %>
+      <nav class="navbar justify-content-between">
+        <div class="d-flex align-items-center justify-content-left">
+          <a href="/"><%= image_tag 'logo.png', alt: 'Logo', width: 200, class: "multiply" %></a>
+          <a href="/" class="nav-link"><i class="fas fa-home"> Home</i></a>
+        </div>
+        <div class="d-flex" id="navbarSupportedContent">
+          <%= link_to ("<i class='fas fa-cocktail'> Add cocktail</i>").html_safe, new_cocktail_path,  class: "nav-link" %>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Find cocktail" aria-label="Search" value="<%= params[:search] %>">
+            <button class="btn-custom" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <%= yield %>
   </body>
+  </div>
 </html>

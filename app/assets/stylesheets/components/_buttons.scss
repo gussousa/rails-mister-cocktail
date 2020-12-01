@@ -1,0 +1,15 @@
+.btn-custom {
+  color: rgba(255, 255, 255, 0.788);
+  background-image: $my-gradient;
+  background-color: $the_black;
+  border: 0px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  transition: 0.6s;
+}
+
+.btn-custom:hover {
+  color: rgba(255, 255, 255, 0.788);
+  background-image: $my-gradient;
+  background-color: rgb(124, 124, 124);
+}

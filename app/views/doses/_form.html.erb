@@ -1,0 +1,5 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient, as: :select, class: "form-control form-control-lg" %>
+  <%= f.input :description %>
+  <%= f.button :submit, class: "btn-custom" %>
+<% end %>

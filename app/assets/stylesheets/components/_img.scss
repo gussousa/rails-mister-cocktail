@@ -1,0 +1,17 @@
+.multiply {
+  mix-blend-mode: color-dodge;
+  height: 80px;
+  object-fit: contain;
+  margin-right: -30px;
+}
+
+
+.large-img{
+  height: 500px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 5px solid white;
+}
