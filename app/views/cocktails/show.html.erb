@@ -2,8 +2,13 @@
   <div class="row align-items-center">
     <div class="col col-lg-6 col-sm-12 align-items-center">
       <div class="row center">
-        <div class="large-img center" style="background-image: url('<%= @cocktail.img_url %>')">
-        </div>
+        <% if @cocktail.photo.attached? %>
+          <div class="large-img center" style="background-image: url('<%= cl_image_path @cocktail.  photo.key %>')">
+          </div>
+        <% else %>
+           <div class="large-img center placeholder" style="background-image: url('https://res.cloudinary.com/dsw3xlg5l/image/upload/v1606847214/placeholder_xhjd1d.png')">
+          </div>         
+        <% end %>
       </div>
       <div class="row">
         <h1 class="center"><%= @cocktail.name %> <%= link_to ("<i class='fas fa-pencil-alt'></i>").html_safe, edit_cocktail_path %><%= link_to ("<i class='fas fa-eraser'></i>").html_safe, 

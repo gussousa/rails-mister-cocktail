@@ -47,7 +47,7 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params[:cocktail][:name] = capitalize_name(params[:cocktail][:name])
-    params.require(:cocktail).permit(:name, :img_url)
+    params.require(:cocktail).permit(:name, :img_url, :photo)
   end
 
   def set_cocktail
