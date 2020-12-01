@@ -1,14 +1,20 @@
-.multiply {
+.logo {
   mix-blend-mode: color-dodge;
   height: 80px;
   object-fit: contain;
-  margin-right: -30px;
+  transition: 0.6s;
 }
 
 
+.logo:hover{
+  height: 100px;
+  mix-blend-mode: hard-light;
+}
+
 .large-img{
   height: 500px;
-  width: 400px;
+  min-height: 300px;
+  min-width: 150px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

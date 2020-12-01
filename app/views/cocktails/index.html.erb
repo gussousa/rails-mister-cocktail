@@ -4,7 +4,7 @@
     <% if params[:search].nil? %>
       <div class="row">
         <% @cocktails.each do |cocktail| %>
-          <div class="col col-4">
+          <div class="col col-lg-4 col-md-6 col-sm-12">
             <div class="card" style="background-image: url('<%= cocktail.img_url %>')">
               <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
             </div>
@@ -17,7 +17,7 @@
         <h2>Results by <strong>name (<%= @filter_cocktails.count %> results)</strong></h2>
         <br>
         <% @filter_cocktails.each do |cocktail| %>
-          <div class="col col-4">
+          <div class="col col-lg-4 col-md-6 col-sm-12">
             <div class="card" style="background-image: url('<%= cocktail.img_url %>')">
               <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
             </div>
@@ -29,7 +29,7 @@
         <h2>Results by <strong>ingredient (<%= @filter_ingredients.count %> results) </strong></h2>
         <br>
         <% @filter_ingredients.each do |cocktail| %>
-          <div class="col col-4">
+          <div class="col col-lg-4 col-md-6 col-sm-12">
             <div class="card" style="background-image: url('<%= cocktail.img_url %>')">
               <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
             </div>
