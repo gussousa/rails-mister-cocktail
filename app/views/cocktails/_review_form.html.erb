@@ -2,6 +2,6 @@
   <%= f.label :content %>
   <%= f.text_area :content, rows: 5, class: "form-control" %>
   <%= f.label :rating %>
-  <%= f.number_field :rating, name: "Rating", min: 0, max: 5, class: "form-control"  %>
+  <%= f.number_field :rating, min: 0, max: 5, class: "form-control"  %>
   <%= f.submit "Submit review", class: "btn-custom" %>
 <% end %>

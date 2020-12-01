@@ -16,6 +16,7 @@ class CocktailsController < ApplicationController
     @reviews = Review.where(cocktail_id: @cocktail.id)
     @dose = Dose.new
     @review = Review.new
+    @average_review = @reviews.average(:rating)
   end
 
   def new
