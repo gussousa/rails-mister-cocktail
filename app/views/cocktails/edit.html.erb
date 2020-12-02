@@ -1,6 +1,7 @@
 <div class="container">
 <h1>Edit <%= @cocktail.name %></h1>
-
-<%= render 'form' %>
-
+  <hr>
+  <%= render 'form' %>
+  <hr>
+  <%= link_to "Back", cocktail_path(@cocktail), class: "back-link" %>
 </div>
