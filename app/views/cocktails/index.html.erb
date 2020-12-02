@@ -27,7 +27,7 @@
         <div class="row">
           <% @filter_cocktails.each do |cocktail| %>
             <div class="col col-lg-4 col-md-6 col-sm-12">
-              <div class="card" style="background-image: url('<%= cocktail.img_url %>')">
+              <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
                 <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
               </div>
             </div>
@@ -43,7 +43,7 @@
           <div class="row">
             <% @filter_ingredients.each do |cocktail| %>
               <div class="col col-lg-4 col-md-6 col-sm-12">
-                <div class="card" style="background-image: url('<%= cocktail.img_url %>')">
+                <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
                 </div>
               </div>
