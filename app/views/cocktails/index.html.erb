@@ -26,11 +26,15 @@
         </div>
         <div class="row">
           <% @filter_cocktails.each do |cocktail| %>
-            <div class="col col-lg-4 col-md-6 col-sm-12">
-              <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+            <% unless cocktail.photo.attached? %>
+              <div class="card placeholders" style="background-image: url('https://res.cloudinary.com/dsw3xlg5l/image/upload/v1606847214/placeholder_xhjd1d.png')">
                 <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
               </div>
-            </div>
+            <% else %>
+              <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+                <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+              </div>             
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -42,11 +46,15 @@
         <div>
           <div class="row">
             <% @filter_ingredients.each do |cocktail| %>
-              <div class="col col-lg-4 col-md-6 col-sm-12">
-                <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+              <% unless cocktail.photo.attached? %>
+                <div class="card placeholders" style="background-image: url('https://res.cloudinary.com/dsw3xlg5l/image/upload/v1606847214/placeholder_xhjd1d.png')">
                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
                 </div>
-              </div>
+              <% else %>
+                <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+                  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+                </div>             
+              <% end %>
             <% end %>
           </div>
         </div>
